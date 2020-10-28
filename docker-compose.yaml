@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+
+  vue:
+    image: my_vue
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: my_vue
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:80
